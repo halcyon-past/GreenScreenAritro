@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Screen By Aritro</title>
+    <link rel = "stylesheet" href = "css/mycss.css" />
+</head>
+<body>
+    .<script src = "https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+    <h1>Green Screen Effect</h1>
+    <h3>Developed by Aritro Saha</h3>
+    <div class = "gs">
+    <canvas id = "can1">
+    </canvas>
+    <canvas id = "can2">
+    </canvas>
+    </div>
+    <p>
+    Upload Foreground :
+    <input type = "file" multiple = "false" accept = "image/*" id = "finput1" onchange = "loadForegroundImage()">
+    Upload Background:
+    <input type = "file" multiple = "false" accept = "image/*" id = "finput2" onchange = "loadBackgroundImage()">
+    <br>
+    <input type = "button" value = "Apply Green Screen" onclick = "doGreenScreen()" class = "sesky">
+    </p>
+    
+
+
+
+    <script src = "js/myscript.js"></script>
+</body>
+</html>

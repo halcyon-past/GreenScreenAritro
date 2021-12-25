@@ -1,0 +1,60 @@
+body{
+    background-image: url("https://ak.picdn.net/shutterstock/videos/16548586/thumb/1.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    paddig:0;
+    margin:0;
+  }
+  canvas{
+    border:1px solid black;
+    width: 600px;
+    height: 400px;
+  }
+  h1{
+    background-color: #00000010;
+    backdrop-filter: blur(12px);
+    text-align:center;
+    font-family:Arial;
+    font-size:50px;
+  }
+  h3{
+    background-color: #00000010;
+    backdrop-filter: blur(12px);
+    text-align:center;
+    font-family:Arial;
+  }
+  .gs{
+    text-align:center;
+    
+  }
+  p{
+    text-align:center;
+    padding:20px;
+    margin:0px;
+    color:White;
+    font-family:arial;
+    
+    
+  }
+  .sesky{
+    padding:16px 32px;
+    border: none;
+    background-color:#00ff0010;
+    backdrop-filter:blur(12px);
+    color:White;
+    border-radius:20px;
+    font-family:arial;
+    font-size:20px;
+    opacity:0.6;
+    transition:0.3s;
+    cursor:pointer;
+  }
+  .sesky:hover{
+    opacity:1;
+  }
+  input[type="file"]{
+    border:none;
+    background-color:black;
+    padding:6px 12px;
+    cursor:pointer;
+  }
