@@ -1,34 +1,48 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Screen By Aritro</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/logoicon.png"/>
+    <title>Green Screen - Aritro</title>
     <link rel = "stylesheet" href = "css/mycss.css" />
 </head>
+
 <body>
+
     .<script src = "https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
-    <h1>Green Screen Effect</h1>
-    <h3>Developed by Aritro Saha</h3>
+
+    <video width="320" height="240" autoplay loop muted class = "bg">
+    <source src="https://static.videezy.com/system/resources/previews/000/044/890/original/Comp-1_4_1.mp4" type="video/mp4">
+    </video>
+
+    <div class = "main">
+    <h1>Green Screen - Aritro</h1>
     <div class = "gs">
-    <canvas id = "can1">
-    </canvas>
-    <canvas id = "can2">
-    </canvas>
+        <div class = "section">
+            <h3>Foreground</h3>
+            <canvas id = "can1">
+            </canvas>
+            <input type = "file" multiple = "false" accept = "image/*" id = "finput1" onchange = "loadForegroundImage()">
+        </div>
+        <div class = "section">
+            <h3>Background</h3>
+            <canvas id = "can2">
+            </canvas>
+            <input type = "file" multiple = "false" accept = "image/*" id = "finput2" onchange = "loadBackgroundImage()">
+        </div>
     </div>
-    <p>
-    Upload Foreground :
-    <input type = "file" multiple = "false" accept = "image/*" id = "finput1" onchange = "loadForegroundImage()">
-    Upload Background:
-    <input type = "file" multiple = "false" accept = "image/*" id = "finput2" onchange = "loadBackgroundImage()">
-    <br>
-    <input type = "button" value = "Apply Green Screen" onclick = "doGreenScreen()" class = "sesky">
-    </p>
-    
+    </div>
 
-
+    <div class = btn>
+        <button onclick = "doGreenScreen()" class = "button" style="--color: #6eff3e; background-color:black;">Apply</button>
+    </div>
 
     <script src = "js/myscript.js"></script>
+
 </body>
+
 </html>

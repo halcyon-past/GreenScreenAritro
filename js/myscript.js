@@ -1,8 +1,11 @@
+
+// Initializing Variables
 var fgImage = null;
 var bgImage = null;
 var fgCanvas;
 var bgCanvas;
 
+//Loading Foreground Image
 function loadForegroundImage() {
   var file = document.getElementById("finput1");
   fgImage = new SimpleImage(file);
@@ -10,6 +13,7 @@ function loadForegroundImage() {
   fgImage.drawTo(fgCanvas);
 }
 
+//Loading Background Image
 function loadBackgroundImage() {
   var file = document.getElementById("finput2");
   bgImage = new SimpleImage(file);
@@ -17,9 +21,9 @@ function loadBackgroundImage() {
   bgImage.drawTo(bgCanvas);
 }
 
+//Creating Final Image
 function createComposite() {
   bgImage.setSize(fgImage.getWidth(),fgImage.getHeight())
-  // this function creates a new image with the dimensions of the foreground image and returns the composite green screen image
   var output = new SimpleImage(fgImage.getWidth(),fgImage.getHeight());
   for (var pixel of fgImage.values()) {
     var x = pixel.getX();
@@ -35,6 +39,7 @@ function createComposite() {
   return output;
 }
 
+//Drawing the final image to the canvas
 function doGreenScreen() {
   if (fgImage == null  || ! fgImage.complete()) {
     alert("Foreground image not loaded");
@@ -44,14 +49,18 @@ function doGreenScreen() {
   }
   clearCanvas();
   var finalImage = createComposite();
+  console.log("drawing to canvas");
   finalImage.drawTo(fgCanvas);
+  console.log("drawn to canvas");
 }
 
+//Clearing both canvas
 function clearCanvas() {
   doClear(fgCanvas);
   doClear(bgCanvas);
 }
 
+//Clearing the canvas
 function doClear(canvas) {
   var context = canvas.getContext("2d"); context.clearRect(0,0,canvas.width,canvas.height);
 }
