@@ -26,19 +26,20 @@
             <h3>Foreground</h3>
             <canvas id = "can1">
             </canvas>
-            <input type = "file" multiple = "false" accept = "image/*" id = "finput1" onchange = "loadForegroundImage()">
+            <input type = "file" accept = "image/*" id = "finput1" onchange = "loadForegroundImage()">
         </div>
         <div class = "section">
             <h3>Background</h3>
             <canvas id = "can2">
             </canvas>
-            <input type = "file" multiple = "false" accept = "image/*" id = "finput2" onchange = "loadBackgroundImage()">
+            <input type = "file" accept = "image/*" id = "finput2" onchange = "loadBackgroundImage()">
         </div>
     </div>
     </div>
 
     <div class = btn>
         <button onclick = "doGreenScreen()" class = "button" style="--color: #6eff3e; background-color:black;">Apply</button>
+        <button onclick = "download()" class = "buttondwn" style="--color: #ff0000; background-color:black; cursor: not-allowed;">Download</button>
     </div>
 
     <script src = "js/myscript.js"></script>
