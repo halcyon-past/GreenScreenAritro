@@ -4,6 +4,9 @@ var fgImage = null;
 var bgImage = null;
 var fgCanvas;
 var bgCanvas;
+var r = document.querySelector('.buttondwn');
+r.disabled = true;
+
 
 //Loading Foreground Image
 function loadForegroundImage() {
@@ -52,6 +55,9 @@ function doGreenScreen() {
   console.log("drawing to canvas");
   finalImage.drawTo(fgCanvas);
   console.log("drawn to canvas");
+  r.disabled = false;
+  r.style.setProperty('--color', '#6eff3e');
+  r.style.setProperty('cursor', 'pointer');
 }
 
 //Clearing both canvas
@@ -63,4 +69,13 @@ function clearCanvas() {
 //Clearing the canvas
 function doClear(canvas) {
   var context = canvas.getContext("2d"); context.clearRect(0,0,canvas.width,canvas.height);
+}
+
+function download(){
+  var canvas = document.getElementById("can1");
+  image = canvas.toDataURL("image/png", 1.0).replace("image/png", "image/octet-stream");
+  var link = document.createElement('a');
+  link.download = "merged-image.png";
+  link.href = image;
+  link.click();
 }
